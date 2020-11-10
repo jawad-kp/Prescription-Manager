@@ -1,3 +1,8 @@
-# Temproarily remove all dependencies from my commits
-# Dependencies/
-.env
+# This Holds the environment variables and must NEVER be committed to the code
+*.env
+
+# This is our hidden key file to decrypt the contents of our env values
+*.key
+
+# This will hold additional composer stuff for encryption, decryption and accessing our env stuff
+vendor/
