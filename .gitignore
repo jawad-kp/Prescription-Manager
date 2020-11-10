@@ -1,2 +1,3 @@
 # Temproarily remove all dependencies from my commits
 # Dependencies/
+.env
