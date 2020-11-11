@@ -6,3 +6,6 @@
 
 # This will hold additional composer stuff for encryption, decryption and accessing our env stuff
 vendor/
+
+#Project pdfs we happend to add to avoid clutter
+*.pdf
