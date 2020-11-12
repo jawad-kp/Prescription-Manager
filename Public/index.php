@@ -1,5 +1,6 @@
 <?php
 require __DIR__."\\..\\EncrypterCustom.php";
+require "DBConfig.php";
  ?>
 
 <!DOCTYPE html>
