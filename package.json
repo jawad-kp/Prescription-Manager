@@ -2,10 +2,11 @@
   "name": "prescription-manager",
   "version": "1.0.0",
   "description": "stuff",
-  "main": "index.js",
+  "main": "public/index.js",
   "dependencies": {
     "bootstrap": "^4.5.3",
     "jquery": "^3.5.1",
+    "popper.js": "^1.16.1",
     "zxcvbn": "^4.4.2"
   },
   "devDependencies": {},
