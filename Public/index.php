@@ -12,11 +12,11 @@ require "DBConfig.php";
 	<?php 
 	echo ("Hey, if this loads in, everything is set-up and fine.<br>");
 	$lol= "Hello Jawad";
-	echo("Initial: ".$lol."<br>");
+	echo("Initial: $lol <br>");
 	$crt = Encrptr($lol);
-	echo("Encoded: ".$crt."<br>");
+	echo("Encoded: $crt <br>");
 	$dcd = Decrptr($crt);
-	echo("Decoded: ".$dcd."<br>");
+	echo("Decoded: $dcd <br>");
 
 	
 	?>
