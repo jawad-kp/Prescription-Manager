@@ -1,0 +1,28 @@
+{
+  "name": "prescription-manager",
+  "version": "1.0.0",
+  "description": "stuff",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "jquery": "^3.5.1",
+    "zxcvbn": "^4.4.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/studboii/Prescription-Manager.git"
+  },
+  "keywords": [
+    "prescription-manager"
+  ],
+  "author": "Jawad Ahmed Khan, Harshith Diwaka",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/studboii/Prescription-Manager/issues"
+  },
+  "homepage": "https://github.com/studboii/Prescription-Manager#readme"
+}
