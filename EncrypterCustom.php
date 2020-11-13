@@ -1,7 +1,7 @@
 <!-- This fils holds our encryption -->
 
 <?php
-require_once __DIR__.'\\vendor\\autoload.php';
+require_once __DIR__.'/vendor/autoload.php';
 use \Defuse\Crypto\Key;
 use \Defuse\Crypto\Crypto;
 use \Dotenv\Dotenv;

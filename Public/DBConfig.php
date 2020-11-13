@@ -1,7 +1,7 @@
 <!-- This file allows us to connect with our database. -->
 <?php
 
-	require_once __DIR__."\\..\\EnvLdr.php"; //Load our environment varaibles
+	require_once __DIR__."/../EnvLdr.php"; //Load our environment varaibles
 
 	$conn = new mysqli($_ENV["SVNM"], $_ENV["DB_USER"], $_ENV["DB_PASS"],$_ENV["DB"]);//creating a connection object
 
