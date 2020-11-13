@@ -50,7 +50,7 @@
 
 	    if(empty($_POST["pass"]))
 	    {
-	        $pswderr="Please enter a valid Name";
+	        $pswderr="Please enter a valid Password";
 	        $boo = false;
 	    }
 	    else
@@ -60,7 +60,7 @@
 
 	    if(empty($_POST["RePass"]))
 	    {
-	        $reperr="Please enter a valid Name";
+	        $reperr="Please enter a valid Password";
 	        $boo = false;
 	    }
 	    else
