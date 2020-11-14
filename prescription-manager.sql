@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 11, 2020 at 10:13 AM
+-- Generation Time: Nov 14, 2020 at 01:35 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -23,6 +22,20 @@ SET time_zone = "+00:00";
 --
 CREATE DATABASE IF NOT EXISTS `prescription-manager` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
 USE `prescription-manager`;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `adminlog`
+--
+
+DROP TABLE IF EXISTS `adminlog`;
+CREATE TABLE `adminlog` (
+  `Name` varchar(200) NOT NULL COMMENT 'The admin''s name',
+  `AdmId` varchar(200) NOT NULL COMMENT 'The User name for the admin',
+  `AdmPass` varchar(400) NOT NULL COMMENT 'The hashed admin password',
+  `PhnNo` varchar(15) NOT NULL COMMENT 'Contact information for the admin'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Admin Table for Approving and removing doctors';
 
 -- --------------------------------------------------------
 
@@ -114,6 +127,12 @@ CREATE TABLE `presclog` (
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `adminlog`
+--
+ALTER TABLE `adminlog`
+  ADD PRIMARY KEY (`AdmId`);
 
 --
 -- Indexes for table `doclog`
