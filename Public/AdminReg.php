@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Regsiter as a Doctor</title>
+	<title>Regsiter as an Admin</title>
 	<meta charset="utf-8">
   	<meta name="viewport" content="width= device-width, initial-scale=1">
   	<style type="text/css">
