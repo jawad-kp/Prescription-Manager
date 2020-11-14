@@ -107,7 +107,6 @@
              <br>
               <center><button class="btn btn-primary hvr-grow" type="submit">Sign in</button></center>
              <br>
-             <a href="http://localhost:8080/DBMS/register.php" class="btn btn-info hvr-float">Click here to sign up</div></a>
              
          </form>
 
