@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -196,7 +195,7 @@
             </div>
 
             <div class="col-sm-6">
-		           <input type="textbox" placeholder="Enter Address" name="Addr" class="form-control">
+		           <textarea class="form-control" rows="3" id="Addr" name="Addr"></textarea>
 		           <span class="error">* <?php echo $addrerr;?> </span>
 		    </div>
 
