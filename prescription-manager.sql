@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 14, 2020 at 01:35 PM
+-- Generation Time: Nov 15, 2020 at 07:01 AM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.1
 
@@ -90,7 +90,7 @@ CREATE TABLE `patlog` (
   `PatID` varchar(400) NOT NULL COMMENT 'This is the Primary Key column that holds patient ID for us',
   `PatName` mediumtext NOT NULL COMMENT 'Patient Names. These are encrypted.',
   `PatPass` mediumtext NOT NULL COMMENT 'Hashed Patient Password',
-  `Addr` longblob NOT NULL COMMENT 'Patient''s address',
+  `Addr` mediumtext NOT NULL COMMENT 'Patient''s address',
   `PatDOB` date NOT NULL COMMENT 'Patient''s Date Of Birth',
   `PatGen` enum('Cis-Male','Cis-Female','Non Binary','Decline','Trans-Male','Trans-Female') NOT NULL DEFAULT 'Decline' COMMENT 'Patient''s Gender'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='This table houses basic user profiles.';
