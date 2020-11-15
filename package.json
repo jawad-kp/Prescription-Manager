@@ -4,9 +4,11 @@
   "description": "stuff",
   "main": "public/index.js",
   "dependencies": {
+    "@mdi/font": "^5.8.55",
     "bootstrap": "^4.5.3",
     "jquery": "^3.5.1",
     "popper.js": "^1.16.1",
+    "pretty-checkbox": "^3.0.3",
     "zxcvbn": "^4.4.2"
   },
   "devDependencies": {},
