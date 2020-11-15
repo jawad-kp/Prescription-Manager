@@ -18,6 +18,11 @@ require "DBConfig.php";
 	$dcd = Decrptr($crt);
 	echo("Decoded: $dcd <br>");
 
+	// $txt = "<paste your encrypted address here to verify>";
+	// echo("My Addr is: <br>");
+	// $ans = Decrptr($txt);
+	// echo($ans)
+
 	
 	?>
 
