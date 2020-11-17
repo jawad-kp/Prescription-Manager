@@ -39,7 +39,7 @@ session_start();
 			$dob = date("d/m/Y", strtotime($Dte));
 			$gender = $row["PatGen"];
 			echo "Address: $adr<br>DOB(dd/mm/yyyy): $dob<br>Gender: $gender<br><br>";
-			echo "<button id=\"CnfrmID\" onclick=\"window.location.href='ReportAndDiagnosis.php'\">Confirm</button>";
+			echo "<button id=\"CnfrmID\" onclick=\"window.location.href='EnterPresc.php'\">Confirm</button>";
 			$_SESSION["DocPatID"] = $ID;
 
 		}
