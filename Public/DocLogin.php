@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -66,9 +69,8 @@
 	    	$dbPass = $row["DocPass"];
 	    	if(password_verify($pass, $dbPass))
 	    	{
-	    		$GLOBALS["btmerr"] = 'Correct Login!!<br> Welcome: '.$row['DocName'];
-	    		//Add redirect link here once next page for the admin is done.
-	    		return;
+	    		$_SESSION["DocID"] = $usr;
+	    		header("Location:PrescribeMedicine.php");
 	    	}
 	    	else
 	    	{
