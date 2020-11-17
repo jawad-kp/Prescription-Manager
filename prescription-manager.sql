@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 15, 2020 at 07:01 AM
+-- Generation Time: Nov 17, 2020 at 05:21 AM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.1
 
@@ -63,21 +63,10 @@ CREATE TABLE `patlist` (
   `DocID` varchar(300) NOT NULL COMMENT 'References Doc ID',
   `PatID` varchar(400) NOT NULL COMMENT 'References Pat ID',
   `PrescID` varchar(300) NOT NULL COMMENT 'Holds The Prescription ID',
-  `DocReport` mediumblob NOT NULL COMMENT 'A general diagnosis',
-  `Comments` mediumblob COMMENT 'Comments in general',
+  `DocReport` mediumtext NOT NULL COMMENT 'A general diagnosis',
+  `Comments` mediumtext COMMENT 'Comments in general',
   `Expiry` date DEFAULT NULL COMMENT 'When The prescription is supposed to expire'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Patient And Prescription List';
-
---
--- Triggers `patlist`
---
-DROP TRIGGER IF EXISTS `DateSetDefault`;
-DELIMITER $$
-CREATE TRIGGER `DateSetDefault` BEFORE INSERT ON `patlist` FOR EACH ROW if ( isnull(new.Expiry) ) then
- set new.Expiry=(curdate()+15);
-end if
-$$
-DELIMITER ;
 
 -- --------------------------------------------------------
 
