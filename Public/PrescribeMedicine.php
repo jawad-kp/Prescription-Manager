@@ -26,6 +26,7 @@ session_start();
 				// console.log(val);
 				$.ajax(
 				{
+					async: true,
 					type: "POST",
 					url:"ShowPatientDetails.php",
 					data:{PatID: val},

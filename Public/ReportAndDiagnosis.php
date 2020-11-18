@@ -54,6 +54,8 @@ if (!(isset($_SESSION["DocPatID"]))) {
 		}
 		$Qry  = "$Qry$Doc,$PatID,$PrescID,$rep,$pst,$wsd)";
 		$res = $conn->query($Qry);
+		$ed = strlen($PrescID) - 2;
+		$_SESSION['PrescID'] = substr($PrescID,1,$ed);
 		header("Location:FillPrescription.php");
 
 		
