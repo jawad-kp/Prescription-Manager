@@ -12,12 +12,9 @@ if (!(isset($_SESSION["PatName"])))
 	<title>Prescription List</title>
 	<meta charset="utf-8">
   	<meta name="viewport" content="width= device-width, initial-scale=1">
-  	<style type="text/css">
-  		.error{ color: red; font-size: 16px }
-  	</style>
   	<link rel="stylesheet" type="text/css" href="../node_modules/bootstrap/dist/css/bootstrap.css">
-  	<link rel="stylesheet" type="text/css" href="../Dependencies/Hover-master/css/hover.css">
-  	<link rel="stylesheet" type="text/css" href="../Dependencies/CSS Animations/animate.css">
+  	<!-- <link rel="stylesheet" type="text/css" href="../Dependencies/Hover-master/css/hover.css"> -->
+  	<!-- <link rel="stylesheet" type="text/css" href="../Dependencies/CSS Animations/animate.css"> -->
   	<script type="text/javascript" src="../node_modules/jquery/dist/jquery.js"></script>
   	<script type="text/javascript" src="../node_modules/bootstrap/dist/js/bootstrap.js">
 	</script>
