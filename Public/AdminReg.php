@@ -6,6 +6,7 @@
   	<meta name="viewport" content="width= device-width, initial-scale=1">
   	<style type="text/css">
   		.error{ color: red; font-size: 16px }
+		.titles {text-align: right;}
   	</style>
   	<link rel="stylesheet" type="text/css" href="../node_modules/bootstrap/dist/css/bootstrap.css">
   	<link rel="stylesheet" type="text/css" href="../Dependencies/Hover-master/css/hover.css">
@@ -123,84 +124,78 @@
 ?>
 
 	<div class="container-fluid">
-	<form name="docreg" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" >
-		<div class="row form-group">
+		<center><h1 style="color: black" class="fadeInDownBig animated">User Register</h1></center><hr><br>
+		<div class="row">
+			<div class="col-2"></div>
+			<form name="docreg" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" class="col-8">
+				<div class="row form-group">
+					<div class="col-sm-4 titles">
+						<label class = "lab">Name </label>
+					</div>
 
-	 		<div class="col-sm-4">
-				<label class = "lab">Name </label>
+					<div class="col-sm-6">
+						<input type="text" name="nm" placeholder="Your name..." class="form-control">
+						<span class="error"> <?php echo $nmerr;?></span>
+					</div>	
+
+				</div>
+				<br>
+				<div class="row form-group">
+					<div class="col-sm-4 titles">
+						<label class = "lab">User ID</label>
+					</div>
+
+					<div class="col-sm-6">
+						<input type="text" name="uid" placeholder="User ID" class="form-control">
+						<span class="error">  <?php echo $uiderr;?> </span>
+					</div>	
+				</div>
+				<br>
+				<div class="row form-group">
+					<div class="col-sm-4 titles">
+						<label class = "lab">Password</label>
+					</div>
+					<div class="col-sm-6">
+						<input type="password" placeholder="Enter Password" name="pass" class="form-control" required>
+						<span class="error"> <?php echo $pswderr;?> </span>	
+					</div>
+				</div>
+				<br>
+				<div class="row form-group">
+					<div class="col-sm-4 titles">
+						<label class = "lab">Re-enter Password</label>
+					</div>
+					<div class="col-sm-6">
+						<input type="password" placeholder="Renter Password" name="RePass" class="form-control" autocomplete="new-password">
+						<span class="error"> <?php echo $reperr;?> </span>
+					</div>	
+				</div>
+				<br>
+				<div class="row form-group">
+					<div class="col-sm-4 titles">
+						<label class = "lab">Contact Number</label>
+					</div>
+					<div class="col-sm-6">
+						<input type="text" placeholder="Mob/Work Number" name="Contact" pattern="^[1-9]{1}[0-9]{9}$" class="form-control">
+						<span class="error"> <?php echo $Moberr;?> </span>
+					</div>
+				</div>
+				<br>
+				<center><button type="submit" class=" btn btn-primary hvr-glow ">Submit</button></center>
+			<!-- <div class="row">
+			<div class="col-sm"></div>
+			<div class="col-sm">
+			<button type="submit" class=" btn btn-primary hvr-radial-out " style="background-color: black; font-size: 25px; border: none;">Submit</button>	
 			</div>
-			
-			<div class="col-sm-6">
-				<input type="text" name="nm" placeholder="Your name..." class="form-control">
-				<span class="error">* <?php echo $nmerr;?></span>
-			</div>	
-		
+			<div class="col-sm"></div>
+
+			</div>	 -->
+
+
+			</form>
+			<div class="col-2"></div>
 		</div>
-
-		<div class="row form-group">
-
-			<div class="col-sm-4">
-				<label class = "lab">User ID</label>
-			</div>
-
-			<div class="col-sm-6">
-				<input type="text" name="uid" placeholder="User ID" class="form-control">
-				<span class="error">*  <?php echo $uiderr;?> </span>
-			</div>	
-
-		</div>
-
-		<div class="row form-group">
-
-			<div class="col-sm-4">
-				<label class = "lab">Password</label>
-			</div>
-
-			<div class="col-sm-6">
-		           <input type="password" placeholder="Enter Password" name="pass" class="form-control" required>
-		           <span class="error">* <?php echo $pswderr;?> </span>	
-		    </div>
-
-		</div>
-
-		<div class="row form-group">
-			<div class="col-sm-4">
-		         <label class = "lab">Re-enter Password</label>
-            </div>
-
-            <div class="col-sm-6">
-		           <input type="password" placeholder="Renter Password" name="RePass" class="form-control" autocomplete="new-password">
-		           <span class="error">* <?php echo $reperr;?> </span>
-
-		    </div>	
-        </div>
-
-
-        <div class="row form-group">
-
-			<div class="col-sm-4">
-		         <label class = "lab">Contact Number</label>
-            </div>
-
-            <div class="col-sm-6">
-		           <input type="text" placeholder="Mob/Work Number" name="Contact" pattern="^[1-9]{1}[0-9]{9}$" class="form-control">
-		           <span class="error">* <?php echo $Moberr;?> </span>
-		    </div>
-		    	
-        </div>
-
-        <div class="row">
-        	<div class="col-sm"></div>
-        	<div class="col-sm">
-	        	<button type="submit" class=" btn btn-primary hvr-radial-out " style="background-color: black; font-size: 25px; border: none;">Submit</button>	
-     		</div>
-        	<div class="col-sm"></div>
-
-     	</div>	
-
-		
-	</form>
-</div>
+	</div>
 
 </body>
 </html>

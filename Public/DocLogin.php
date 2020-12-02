@@ -4,11 +4,12 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Login as a Doctor</title>
+	<title>Doctor Login</title>
 	<meta charset="utf-8">
   	<meta name="viewport" content="width= device-width, initial-scale=1">
   	<style type="text/css">
   		.error{ color: red; font-size: 16px }
+		.titles {text-align: right;}
   	</style>
   	<link rel="stylesheet" type="text/css" href="../node_modules/bootstrap/dist/css/bootstrap.css">
   	<link rel="stylesheet" type="text/css" href="../Dependencies/Hover-master/css/hover.css">
@@ -98,34 +99,39 @@ session_start();
 	}
   	
   ?>
-  <div class="container">
-        <center>
-        <h1 style="color: black" class="fadeInDownBig animated">Sign in</h1></center><br>
-        <div class="d-flex justify-content-center">
-          <div class="whi">
-
-            <form name="HenloFrens" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method = "post" >
-              <div class="row"></div>
-              
-                <div class="form-group">
-            <input class="form-control" type="text" name="uid" placeholder="User ID" size="50">
-            
-            <div class="error"> <?php echo $uiderr;?> </div>
-            </div>
-            <br>
-            <div class="form-group">
-              
-                 <input class="form-control" type="password" placeholder="Enter Password"  name="pass">
-                  <div class="error"> <?php echo $pswderr;?> </div>   
-               </div>
-               <div class="error"> <?php echo $btmerr;?> </div> 
-             <br>
-              <center><button class="btn btn-primary hvr-grow" type="submit">Sign in</button></center>
-             <br>
-             
-         </form>
-
-      </div>
-    </div>
+	<div class="container-fluid">
+		<center><h1 style="color: black" class="fadeInDownBig animated">Doctor Sign in</h1></center>
+		<hr>
+		<div class="container">
+			<div class="row">
+				<div class="col-3"></div>
+					<form name="HenloFrens" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method = "post" class="col-6">
+						<div class="row form-group">
+							<div class="col-4 titles">
+								<label class = "#">User ID:</label>
+							</div>
+							<div class="col-6">
+								<input class="form-control" type="text" name="uid" placeholder="User ID" size="50">
+								<span class="error"> <?php echo $uiderr;?> </span>
+							</div>
+						</div>
+						<br>
+						<div class=" row form-group">
+							<div class="col-4 titles">
+								<label class = "#">Password:</label>
+							</div>
+							<div class="col-6">
+								<input class="form-control" type="password" placeholder="Enter Password"  name="pass">
+								<span class="error"> <?php echo $pswderr;?> </span>   
+							</div>
+						</div>
+						<br>
+						<div class="error"> <?php echo $btmerr;?> </div> 
+						<center><button class="btn-primary btn hvr-glow" type="submit">Sign in</button></center>
+					</form>
+				<div class="col-3"></div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
