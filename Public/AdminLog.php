@@ -86,7 +86,7 @@
   ?>
 
 	<div class="container-fluid">
-		<center><h1 style="color: black" class="fadeInDownBig animated">User Sign in</h1></center><hr><br>
+		<center><h1 style="color: black" class="fadeInDownBig animated">Admin Sign in</h1></center><hr><br>
 		<div class="container">
 			<div class="row">
 				<div class="col-3"></div>

@@ -32,14 +32,23 @@ session_start();
 		{
 			$row = $res->fetch_assoc();
 			$name = Decrptr($row["PatName"]);
-			echo "Patient Details are as follows: ";
-			echo "Name: $name<br>";
+			echo "<div class=\"container\">";
+			echo "<center><h3>Patient Details</h3></center><hr>";
+			echo "<div class=\"row\">";
+			echo "<div class=\"col-3\"></div>";
+			echo "<table class=\"table table-bordered col-6\">";
+			echo "<tr>";
+			echo "<td>Name </td> <td>$name</td></tr>";
 			$adr = Decrptr($row["Addr"]);
 			$Dte = $row["PatDOB"];
 			$dob = date("d/m/Y", strtotime($Dte));
 			$gender = $row["PatGen"];
-			echo "Address: $adr<br>DOB(dd/mm/yyyy): $dob<br>Gender: $gender<br><br>";
-			echo "<button id=\"CnfrmID\" onclick=\"window.location.href='ReportAndDiagnosis.php'\">Confirm</button>";
+			echo "<tr><td>Address </td><td>$adr</td></tr><tr><td>DOB(dd/mm/yyyy)</td><td> $dob</td></tr><tr><td>Gender </td><td>$gender</td></tr>";
+			echo "</table>";
+			echo "<div class=\"col-3\"></div>";
+			echo "</div>";
+			echo "<center><button id=\"CnfrmID\" onclick=\"window.location.href='ReportAndDiagnosis.php'\"class=\"btn btn-primary hvr-glow\">Confirm</button></center>";
+			echo "</div>";
 			$_SESSION["DocPatID"] = $ID;
 
 		}

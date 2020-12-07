@@ -13,6 +13,7 @@ if (!(isset($_SESSION["PrescID"])))
   	<meta name="viewport" content="width= device-width, initial-scale=1">
   	<style type="text/css">
   		.error{ color: red; font-size: 16px }
+		.titles {text-align: right;}
   	</style>
   	<link rel="stylesheet" type="text/css" href="../node_modules/bootstrap/dist/css/bootstrap.css">
   	<link rel="stylesheet" type="text/css" href="../Dependencies/Hover-master/css/hover.css">
@@ -51,25 +52,50 @@ if (!(isset($_SESSION["PrescID"])))
 
 </head>
 <body>
-	<br>
-	<!-- <center> -->
+	<div class="container-fluid">
+		<center><br><h1 style="color: black" class="fadeInDownBig animated">Prescription</h1></center><hr><br>
 		<div id="FetchData"></div>
-	<div id="Bada-Div">
-		<label for="Tab-Name">Tablet Name</label>
-		<input type="text" name="Tab-Name" id="Tab-Name" class="form-control" placeholder="Tablet Name">
-		<span class="error" id="Tab-Name-Err"></span><br>
-		<label for="Freq">Frequency</label>
-		<input type="text" name="Freq" id="Freq" class="form-control" placeholder="Frequency">
-		<span class="error" id="Freq-Err"></span><br>
-		<label for="Dosage">Dosage</label>
-		<input type="text" name="Dosage" id="Dosage" class="form-control" placeholder="Dosage">
-		<span class="error" id="Dosage-Err"></span>
-
-		<br><br>
-		<button class="btn btn-primary hvr-grow" id="AddPres">Add</button>
-		<br><br>
-		<button class="btn btn-primary hvr-grow" onclick="window.location.replace('PatientAdded.html')">Continue</button>
+		<div class="row">
+			<div class="col-3"></div>
+			<div id="Bada-Div" class="col-6">
+				<div class="row form-group">
+					<div class="col-4 titles">
+						<label for="Tab-Name">Tablet Name: </label>
+					</div>
+					<div class="col-6">
+						<input type="text" name="Tab-Name" id="Tab-Name" class="form-control" placeholder="Tablet Name">
+						<span class="error" id="Tab-Name-Err"></span>
+					</div>
+				</div>
+				<br>
+				<div class="row form-group">
+					<div class="col-4 titles">
+						<label for="Freq">Frequency: </label>
+					</div>
+					<div class="col-6">
+						<input type="text" name="Freq" id="Freq" class="form-control" placeholder="Frequency">
+						<span class="error" id="Freq-Err"></span>
+					</div>
+				</div>
+				<br>
+				<div class="row form-group">
+					<div class="col-4 titles">
+						<label for="Dosage">Dosage:</label>
+					</div>
+					<div class="col-6">
+						<input type="text" name="Dosage" id="Dosage" class="form-control" placeholder="Dosage">
+						<span class="error" id="Dosage-Err"></span>
+					</div>
+				</div>
+				<br>
+				<center>
+					<button class="btn btn-primary hvr-glow" id="AddPres" style="width: 90px;">Add</button>
+					<br><br>
+					<button class="btn btn-primary hvr-glow" onclick="window.location.replace('PatientAdded.html')">Continue</button>
+				<center>
+			</div>
+			<div class="col-3">
+		</div>
 	</div>
-	<!-- </center> -->
 </body>
 </html>

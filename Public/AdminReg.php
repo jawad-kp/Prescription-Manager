@@ -124,7 +124,7 @@
 ?>
 
 	<div class="container-fluid">
-		<center><h1 style="color: black" class="fadeInDownBig animated">User Register</h1></center><hr><br>
+		<center><h1 style="color: black" class="fadeInDownBig animated">Admin Register</h1></center><hr><br>
 		<div class="row">
 			<div class="col-2"></div>
 			<form name="docreg" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" class="col-8">

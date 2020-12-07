@@ -6,6 +6,7 @@
   	<meta name="viewport" content="width= device-width, initial-scale=1">
   	<style type="text/css">
   		.error{ color: red; font-size: 16px }
+		.titles {text-align: right;}
   	</style>
   	<link rel="stylesheet" type="text/css" href="../node_modules/bootstrap/dist/css/bootstrap.css">
   	<link rel="stylesheet" type="text/css" href="../Dependencies/Hover-master/css/hover.css">
@@ -138,154 +139,177 @@
 ?>
 
 	<div class="container-fluid">
-	<form name="docreg" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" >
-		<div class="row form-group">
+	<center><h1 style="color: black" class="fadeInDownBig animated">User Register</h1></center><hr><br>
+		<div class="row">
+			<div class="col-2"></div>
+			<form name="docreg" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" class="col-8">
+				<div class="row form-group">
 
-	 		<div class="col-sm-4">
-				<label class = "lab">Name </label>
-			</div>
+	 				<div class="col-sm-4 titles">
+						<label class = "lab">Name: </label>
+					</div>
 			
-			<div class="col-sm-6">
-				<input type="text" name="nm" placeholder="Your name..." class="form-control">
-				<span class="error">* <?php echo $nmerr;?></span>
-			</div>	
+					<div class="col-sm-6">
+						<input type="text" name="nm" placeholder="Your name..." class="form-control">
+						<span class="error"> <?php echo $nmerr;?></span>
+					</div>	
+				</div>
+				<br>
+				<div class="row form-group">
+
+					<div class="col-sm-4 titles">
+						<label class = "lab">User ID: </label>
+					</div>
+
+					<div class="col-sm-6">
+						<input type="text" name="uid" placeholder="User ID" class="form-control">
+						<span class="error">  <?php echo $uiderr;?> </span>
+					</div>	
+
+				</div>
+				<br>
+				<div class="row form-group">
+
+					<div class="col-sm-4 titles">
+						<label class = "lab">Password: </label>
+					</div>
+
+					<div class="col-sm-6">
+						<input type="password" placeholder="Enter Password" name="pass" class="form-control" required>
+						<span class="error"> <?php echo $pswderr;?> </span>	
+					</div>
+
+				</div>
+				<br>
+				<div class="row form-group">
+					<div class="col-sm-4 titles">
+						<label class = "lab">Re-enter Password: </label>
+					</div>
+
+					<div class="col-sm-6">
+						<input type="password" placeholder="Renter Password" name="RePass" class="form-control" autocomplete="new-password">
+						<span class="error"> <?php echo $reperr;?> </span>
+
+					</div>	
+				</div>
+				<br>
+
+				<div class="row form-group">
+
+					<div class="col-sm-4 titles">
+						<label class = "lab">Address: </label>
+					</div>
+
+					<div class="col-sm-6">
+						<textarea class="form-control" rows="3" id="Addr" name="Addr"></textarea>
+						<span class="error"> <?php echo $Addrerr;?> </span>
+					</div>
+						
+				</div>
+				<br>
+				<div class="row form-group">
+
+					<div class="col-sm-4 titles">
+						<label for="DOB" class = "lab">DOB: </label>
+					</div>
+
+					<div class="col-sm-6">
+						<input type="date" placeholder="DOB" name="DOB"class="form-control">
+						<span class="error"> <?php echo $Doberr;?> </span>
+					</div>
+						
+				</div>
+				<br>
+				<div class="row form-group">
+
+					<div class="col-sm-4 titles">
+						<label for="DOB" class = "lab">Gender: </label>
+					</div>
+					<div class="col-sm-6">
+						<select name="gender" class="form-control" >
+							<option value="" disabled selected>Select your gender</option>
+							<option value="Cis-Male">Cis-Male</option>
+							<option value="Cis-Female">Cis-Female</option>
+							<option value="Trans-Male">Trans-Male</option>
+							<option value="Trans-Female">Trans-Female</option>
+							<option value="Non-Binary">Non-Binary</option>
+							<option value="Decline">Decline</option>
+						</select>
+					</div>
+				</div>
+				<br>
+				<center><button type="submit" class=" btn btn-primary hvr-glow ">Submit</button></center>
 		
+			</form>
+			<div class="col-2"></div>
 		</div>
+	</div>
 
-		<div class="row form-group">
+<!-- <div class="row">
 
-			<div class="col-sm-4">
-				<label class = "lab">User ID</label>
+	<div class="col-sm-8">
+		<div class="pretty p-icon p-curve p-jelly">
+			<input type="radio" name="gender" value="Cis-Male">
+			<div class="state p-info">
+				<i class="icon mdi mdi-check"></i>
+				<label> Cis-Male</label>
 			</div>
-
-			<div class="col-sm-6">
-				<input type="text" name="uid" placeholder="User ID" class="form-control">
-				<span class="error">*  <?php echo $uiderr;?> </span>
-			</div>	
-
 		</div>
 
-		<div class="row form-group">
 
-			<div class="col-sm-4">
-				<label class = "lab">Password</label>
+		<div class="pretty p-icon p-curve p-jelly">
+			<input type="radio" name="gender" value="Cis-Female">
+			<div class="state p-info">
+				<i class="icon mdi mdi-check"></i>
+				<label> Cis-Female</label>
 			</div>
-
-			<div class="col-sm-6">
-		           <input type="password" placeholder="Enter Password" name="pass" class="form-control" required>
-		           <span class="error">* <?php echo $pswderr;?> </span>	
-		    </div>
-
 		</div>
 
-		<div class="row form-group">
-			<div class="col-sm-4">
-		         <label class = "lab">Re-enter Password</label>
-            </div>
+		<div class="pretty p-icon p-curve p-jelly">
+			<input type="radio" name="gender" value="Trans-Male">
+			<div class="state p-info">
+				<i class="icon mdi mdi-check"></i>
+				<label> Trans-Male</label>
+			</div>
+		</div>
 
-            <div class="col-sm-6">
-		           <input type="password" placeholder="Renter Password" name="RePass" class="form-control" autocomplete="new-password">
-		           <span class="error">* <?php echo $reperr;?> </span>
+		<div class="pretty p-icon p-curve p-jelly">
+			<input type="radio" name="gender" value="Trans-Female">
+			<div class="state p-info">
+				<i class="icon mdi mdi-check"></i>
+				<label> Trans-Female</label>
+			</div>
+		</div>
 
-		    </div>	
-        </div>
+		<div class="pretty p-icon p-curve p-jelly">
+			<input type="radio" name="gender" value="Non-Binary">
+			<div class="state p-info">
+				<i class="icon mdi mdi-check"></i>
+				<label> Non-Binary</label>
+			</div>
+		</div>
 
-
-        <div class="row form-group">
-
-			<div class="col-sm-4">
-		         <label class = "lab">Address</label>
-            </div>
-
-            <div class="col-sm-6">
-		          <textarea class="form-control" rows="3" id="Addr" name="Addr"></textarea>
-		          <span class="error">* <?php echo $Addrerr;?> </span>
-		    </div>
-		    	
-        </div>
-
-        <div class="row form-group">
-
-			<div class="col-sm-4">
-		         <label for="DOB" class = "lab">DOB</label>
-            </div>
-
-            <div class="col-sm-6">
-		           <input type="date" placeholder="DOB" name="DOB"class="form-control">
-		           <span class="error">* <?php echo $Doberr;?> </span>
-		    </div>
-		    	
-        </div>
-
-        <div class="row">
-
-        	<div class="col-sm-8">
-	            <div class="pretty p-icon p-curve p-jelly">
-	            	<input type="radio" name="gender" value="Cis-Male">
-	            	<div class="state p-info">
-	            		<i class="icon mdi mdi-check"></i>
-	            		<label> Cis-Male</label>
-	            	</div>
-	            </div>
-
-
-	            <div class="pretty p-icon p-curve p-jelly">
-	            	<input type="radio" name="gender" value="Cis-Female">
-	            	<div class="state p-info">
-	            		<i class="icon mdi mdi-check"></i>
-	            		<label> Cis-Female</label>
-	            	</div>
-	            </div>
-
-	            <div class="pretty p-icon p-curve p-jelly">
-	            	<input type="radio" name="gender" value="Trans-Male">
-	            	<div class="state p-info">
-	            		<i class="icon mdi mdi-check"></i>
-	            		<label> Trans-Male</label>
-	            	</div>
-	            </div>
-
-	            <div class="pretty p-icon p-curve p-jelly">
-	            	<input type="radio" name="gender" value="Trans-Female">
-	            	<div class="state p-info">
-	            		<i class="icon mdi mdi-check"></i>
-	            		<label> Trans-Female</label>
-	            	</div>
-	            </div>
-
-	            <div class="pretty p-icon p-curve p-jelly">
-	            	<input type="radio" name="gender" value="Non-Binary">
-	            	<div class="state p-info">
-	            		<i class="icon mdi mdi-check"></i>
-	            		<label> Non-Binary</label>
-	            	</div>
-	            </div>
-
-	            <div class="pretty p-icon p-curve p-jelly">
-	            	<input type="radio" name="gender" checked="checked" value="Decline">
-	            	<div class="state p-info">
-	            		<i class="icon mdi mdi-check"></i>
-	            		<label> Decline</label>
-	            	</div>
-	            </div>
-	        </div>
-
-		    	
-        </div>
-        <br><br>
-
-        <div class="row">
-        	<div class="col-sm"></div>
-        	<div class="col-sm">
-	        	<button type="submit" class=" btn btn-primary hvr-radial-out " style="background-color: black; font-size: 25px; border: none;">Submit</button>	
-     		</div>
-        	<div class="col-sm"></div>
-
-     	</div>	
+		<div class="pretty p-icon p-curve p-jelly">
+			<input type="radio" name="gender" checked="checked" value="Decline">
+			<div class="state p-info">
+				<i class="icon mdi mdi-check"></i>
+				<label> Decline</label>
+			</div>
+		</div>
+	</div>
 
 		
-	</form>
-</div>
+</div> -->
+
+<!-- <div class="row">
+	<div class="col-sm"></div>
+	<div class="col-sm">
+		<button type="submit" class=" btn btn-primary hvr-glow ">Submit</button>	
+	</div>
+	<div class="col-sm"></div>
+
+</div>	 -->
+		
 
 </body>
 </html>

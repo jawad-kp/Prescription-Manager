@@ -14,6 +14,7 @@ if (!(isset($_SESSION["DocID"])))
   	<meta name="viewport" content="width= device-width, initial-scale=1">
   	<style type="text/css">
   		.error{ color: red; font-size: 16px }
+		.titles {text-align: right;}
   	</style>
   	<link rel="stylesheet" type="text/css" href="../node_modules/bootstrap/dist/css/bootstrap.css">
   	<link rel="stylesheet" type="text/css" href="../Dependencies/Hover-master/css/hover.css">
@@ -51,16 +52,26 @@ if (!(isset($_SESSION["DocID"])))
 	require "DBConfig.php";
   	require "InpModder.php";
 ?>
-<div id="BigDisp">
-		<label for="PatID">
-			Patient ID 
-		</label>
-			<input type="text" name="PatID" placeholder="Enter Patient ID" class="form-group" id="PatID">
-		<br>
-        <center><button class="btn btn-primary hvr-grow" id="Srch">Search</button></center>
-        <br>
 
-        <div id="DetailDisp"></div>
+<div id="BigDisp" class="container">
+	<div class="row">
+		<div class="col-4"></div>
+		<div class="col-4">
+			<div class="row form-group">
+				<div class="col-4 titles">
+					<label for="PatID">Patient ID: </label>
+				</div>
+				<div class="col-8">
+					<input type="text" name="PatID" placeholder="Enter Patient ID" class="form-control" id="PatID">
+				</div>
+				<br>
+				
+			</div>
+		</div>
+		<div class="col-4"></div>
+	</div>
+	<center><button class="btn btn-primary hvr-glow" id="Srch">Search</button></center>
+	<div id="DetailDisp"></div>
 </div>
 
 </body>

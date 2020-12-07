@@ -7,11 +7,12 @@ if (!(isset($_SESSION["DocPatID"]))) {
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Enter Details</title>
+	<title>Patient Report</title>
 	<meta charset="utf-8">
   	<meta name="viewport" content="width= device-width, initial-scale=1">
   	<style type="text/css">
   		.error{ color: red; font-size: 16px }
+		.titles {text-align: left;}
   	</style>
   	<link rel="stylesheet" type="text/css" href="../node_modules/bootstrap/dist/css/bootstrap.css">
   	<link rel="stylesheet" type="text/css" href="../Dependencies/Hover-master/css/hover.css">
@@ -62,26 +63,47 @@ if (!(isset($_SESSION["DocPatID"]))) {
 	}
 
 	?>
+<div class="contaier-fluid">
+	<center><h1 style="color: black" class="fadeInDownBig animated">Patient Report</h1></center><hr><br>
+	<div class="row">
+		<div class="col-4"></div>
+		<form name="EnterPatData" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" class="col-4">
+			<div class="row form-group">
+				<div class="col-12 titles">
+					<label class = "lab">Report: </label>
+				</div>
+				<div class="row"></div>
+				<div class="col-12">
+					<textarea name="DocRep"  rows = "3" class="form-control" required placeholder="Report"></textarea>
+				</div>
+				<br>
+			</div>
+			<div class="row form-group">
+				<div class="col-12 titles">
+					<label class = "lab">Comments: </label>
+				</div>
+				<div class="row"></div>
+				<div class="col-12">
+					<textarea name="DocComents"  rows = "3" class="form-control"  placeholder="Comments"></textarea>
+				</div>
+			</div>
+			<br>
+			<div class="row form-group">
+				<div class="col-12 titles">
+					<label for="ExpiryDate">Date:</label>
+				</div>
+				<div class="row"></div>
+				<div id="dateLab" class="col-12">
+					<input type="text" name="ExpiryDate" id="ExpiryDate" class="form-control">
+				</div>
+			</div>
+			<br>	
+			<center><button type="submit" class="btn btn-primary hvr-glow" >Submit</button></center>
+		</form>	
+		<div class="col-4"></div>
+	</div>
+</div>
 
-
-	<form name="EnterPatData" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-		<textarea name="DocRep"  rows = "3" class="form-control" required placeholder="Report"></textarea>
-		<textarea name="DocComents"  rows = "3" class="form-control"  placeholder="Comments"></textarea>
-		<label for="ExpiryDate">Date</label>
-		<div id="dateLab" class="form-group">
-			<input type="text" name="ExpiryDate" id="ExpiryDate" class="form-control">
-		</div>
-		<br><br>
-
-        <div class="row">
-        	<div class="col-sm"></div>
-        	<div class="col-sm">
-	        	<button type="submit" class=" btn btn-primary hvr-radial-out " style="background-color: black; font-size: 25px; border: none;">Submit</button>	
-     		</div>
-        	<div class="col-sm"></div>
-
-     	</div>	
-	</form>
 	<script>
 		$('#dateLab input').datepicker({
 			format: "yyyy-mm-dd",
