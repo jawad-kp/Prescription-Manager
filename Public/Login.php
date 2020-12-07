@@ -1,3 +1,7 @@
+<?php
+session_start(); 
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -66,8 +70,9 @@
 	    	$dbPass = $row["PatPass"];
 	    	if(password_verify($pass, $dbPass))
 	    	{
-	    		$hesaru = Decrptr($row['PatName']);
-	    		$GLOBALS["btmerr"] = "Correct Login!!<br> Welcome: $hesaru"; 
+	    		$_SESSION["PatName"] = Decrptr($row['PatName']);
+	    		$_SESSION["PatID"] = $usr;
+	    		header("Location:PrescList.php");
 	    	}
 	    	else
 	    	{

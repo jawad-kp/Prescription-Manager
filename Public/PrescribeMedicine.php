@@ -1,5 +1,10 @@
 <?php
 session_start(); 
+if (!(isset($_SESSION["DocID"])))
+{
+	die("Please <a href=\"Doclogin.php\">Login</a> before accessing the page");
+
+}
 ?>
 <!DOCTYPE html>
 <html>

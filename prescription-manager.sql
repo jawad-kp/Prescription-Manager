@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 17, 2020 at 05:21 AM
+-- Generation Time: Nov 21, 2020 at 11:03 AM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.1
 
@@ -51,6 +51,21 @@ CREATE TABLE `doclog` (
   `DocAddr` mediumtext NOT NULL COMMENT 'Doctor''s work address',
   `Contact` varchar(15) NOT NULL COMMENT 'Doctor''s contact number'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Registered Doctor login details';
+
+-- --------------------------------------------------------
+
+--
+-- Stand-in structure for view `nameviewer`
+-- (See below for the actual view)
+--
+DROP VIEW IF EXISTS `nameviewer`;
+CREATE TABLE `nameviewer` (
+`DocName` mediumtext
+,`PatID` varchar(400)
+,`PrescID` varchar(300)
+,`DocReport` mediumtext
+,`Expiry` date
+);
 
 -- --------------------------------------------------------
 
@@ -112,6 +127,16 @@ CREATE TABLE `presclog` (
   `Dosage` varchar(60) NOT NULL COMMENT 'The Dosage of the tablet',
   `Frequency` varchar(300) NOT NULL COMMENT 'How often to take the tablet'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Main Prescription Table';
+
+-- --------------------------------------------------------
+
+--
+-- Structure for view `nameviewer`
+--
+DROP TABLE IF EXISTS `nameviewer`;
+
+DROP VIEW IF EXISTS `nameviewer`;
+CREATE OR REPLACE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `nameviewer`  AS SELECT `doclog`.`DocName` AS `DocName`, `patlist`.`PatID` AS `PatID`, `patlist`.`PrescID` AS `PrescID`, `patlist`.`DocReport` AS `DocReport`, `patlist`.`Expiry` AS `Expiry` FROM (`patlist` join `doclog`) WHERE (`patlist`.`DocID` = `doclog`.`DocID`) ;
 
 --
 -- Indexes for dumped tables
