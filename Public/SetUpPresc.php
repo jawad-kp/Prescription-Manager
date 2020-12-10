@@ -1,4 +1,4 @@
-<<?php 
+<?php 
 session_start();
 if (!(isset($_SESSION["PatName"])))
 {
@@ -6,4 +6,4 @@ if (!(isset($_SESSION["PatName"])))
 
 }
 $_SESSION["PrescID"] = $_POST["Press"];
- ?>
+?>
