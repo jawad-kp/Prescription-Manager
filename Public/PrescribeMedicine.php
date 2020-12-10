@@ -35,7 +35,7 @@ if (!(isset($_SESSION["DocID"])))
 					async: true,
 					type: "POST",
 					url:"ShowPatientDetails.php",
-					data:{PatID: val},
+					data:{PatID: val, FindPat: "false"},
 					success:function (html)
 					{
 						$('#DetailDisp').html(html);

@@ -1,5 +1,11 @@
 <?php
 session_start();
+if (!(isset($_SESSION["DocID"])))
+{
+	die("Please <a href=\"Doclogin.php\">Login</a> before accessing the page");
+
+}
+?>
  ?>
 <!DOCTYPE html>
 <html>
@@ -22,7 +28,8 @@ session_start();
 <?php 
 	require "DBConfig.php";
 	require __DIR__."/../EncrypterCustom.php";
-	if (!(empty($_POST["PatID"])))
+
+	if(!(empty($_POST["PatID"])) && !(empty($_POST["FindPat"])))
 	{
 		
 		$ID = $_POST["PatID"];
@@ -47,8 +54,16 @@ session_start();
 			echo "</table>";
 			echo "<div class=\"col-3\"></div>";
 			echo "</div>";
-			echo "<center><button id=\"CnfrmID\" onclick=\"window.location.href='ReportAndDiagnosis.php'\"class=\"btn btn-primary hvr-glow\">Confirm</button></center>";
-			echo "</div>";
+			if($_POST["FindPat"] == "true")
+			{
+				echo "<center><button id=\"CnfrmID\" onclick=\"window.location.href='ViewHistory.php'\"class=\"btn btn-primary hvr-glow\">View History</button></center>";
+				echo "</div>";
+			}
+			else
+			{
+				echo "<center><button id=\"CnfrmID\" onclick=\"window.location.href='ReportAndDiagnosis.php'\"class=\"btn btn-primary hvr-glow\">Confirm</button></center>";
+				echo "</div>";
+			}
 			$_SESSION["DocPatID"] = $ID;
 
 		}
@@ -56,5 +71,8 @@ session_start();
 		{
 			echo "Patient $ID was not found.";
 		}
+		
+
 	}
+	
 ?>
