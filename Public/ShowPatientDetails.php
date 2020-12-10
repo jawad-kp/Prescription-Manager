@@ -6,7 +6,6 @@ if (!(isset($_SESSION["DocID"])))
 
 }
 ?>
- ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -58,13 +57,16 @@ if (!(isset($_SESSION["DocID"])))
 			{
 				echo "<center><button id=\"CnfrmID\" onclick=\"window.location.href='ViewHistory.php'\"class=\"btn btn-primary hvr-glow\">View History</button></center>";
 				echo "</div>";
+				$_SESSION["FindPatID"] = $ID;
+				$_SESSION["FindPatName"] = $name;
 			}
 			else
 			{
 				echo "<center><button id=\"CnfrmID\" onclick=\"window.location.href='ReportAndDiagnosis.php'\"class=\"btn btn-primary hvr-glow\">Confirm</button></center>";
 				echo "</div>";
+				$_SESSION["DocPatID"] = $ID;
 			}
-			$_SESSION["DocPatID"] = $ID;
+			
 
 		}
 		else
