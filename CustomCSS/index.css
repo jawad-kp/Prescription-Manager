@@ -1,0 +1,76 @@
+body
+{
+	background-image: 
+}
+
+html.disabled
+{
+	overflow-x: hidden; 
+    overflow-y: scroll; 
+}
+footer
+{
+	position: fixed;
+	/*left: 0;*/
+	bottom: 0;
+	padding: 10px 20px 10px 10px;
+	margin: 3px;
+	width: 100%;
+	background-color: teal;
+	color: white;
+	text-align: right;
+}
+#TitleContainer
+{
+	display:         flex;
+	flex-wrap:       wrap;
+	justify-content: center;
+
+}
+#ButtonContainer
+{
+
+	display:         flex;
+	background-color: grey;
+	/*flex-wrap:       wrap;*/
+	flex-direction: column;
+	
+	justify-content: center;
+	align-items: center;
+	width: 700px;
+	margin: auto;
+	padding: 10px;
+	border-radius: 5px;
+
+}
+
+#ButtonContainer > div
+{
+	background-color: #f1f1f1;
+	/*margin: auto;*/
+	/**/
+} 
+
+.fl
+{
+	border-radius: 20px 5px 20px 2px;
+	padding: 5px
+
+}
+.fr
+{
+	border-radius: 2px 30px 5px 20px;
+	padding: 5px;
+	--animate-delay: 0.9s;
+}
+#ButtonContainer > div > a
+{
+	font-size: 40px;
+	text-decoration: none;
+
+
+}
+/*.PatCls
+{
+	--animate-delay: 2s;
+}*/
