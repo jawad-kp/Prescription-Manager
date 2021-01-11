@@ -101,6 +101,7 @@ session_start();
 	}
   	
   ?>
+  <br>
 	<div class="container-fluid">
 		<center><h1 style="color: black" class="fadeInDownBig animated">Doctor Sign in</h1></center>
 		<hr>

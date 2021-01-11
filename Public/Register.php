@@ -137,7 +137,7 @@
     	}//send_data
 
 ?>
-
+	<br>
 	<div class="container-fluid">
 	<center><h1 style="color: black" class="fadeInDownBig animated">User Register</h1></center><hr><br>
 		<div class="row">

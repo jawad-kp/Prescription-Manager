@@ -23,7 +23,7 @@ if (!(isset($_SESSION["DocID"])))
 	</script> 
 </head>
 <body>
-
+<br>
 <?php 
 	require "DBConfig.php";
 	require __DIR__."/../EncrypterCustom.php";
@@ -49,7 +49,7 @@ if (!(isset($_SESSION["DocID"])))
 			$Dte = $row["PatDOB"];
 			$dob = date("d/m/Y", strtotime($Dte));
 			$gender = $row["PatGen"];
-			echo "<tr><td>Address </td><td>$adr</td></tr><tr><td>DOB(dd/mm/yyyy)</td><td> $dob</td></tr><tr><td>Gender </td><td>$gender</td></tr>";
+			echo "<tr><td>Address </td><td>$adr</td></tr><tr><td>Date Of Birth</td><td> $dob</td></tr><tr><td>Gender </td><td>$gender</td></tr>";
 			echo "</table>";
 			echo "<div class=\"col-3\"></div>";
 			echo "</div>";

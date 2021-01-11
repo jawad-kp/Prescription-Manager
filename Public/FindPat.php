@@ -52,7 +52,7 @@ if (!(isset($_SESSION["DocID"])))
 	require "DBConfig.php";
   	require "InpModder.php";
 ?>
-
+<br><br>	
 <div id="BigDisp" class="container">
 	<div class="row">
 		<div class="col-4"></div>
