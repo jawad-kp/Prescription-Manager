@@ -71,8 +71,8 @@ session_start();
 	    	if(password_verify($pass, $dbPass))
 	    	{
 	    		$_SESSION["DocID"] = $usr;
-	    		// header("Location:PrescribeMedicine.php");
-	    		header("Location:FindPat.php");
+	    		$_SESSION["Doctor-Name"] = $row["DocName"];
+	    		header("Location:DoctorDash.php");
 
 	    	}
 	    	else
