@@ -20,11 +20,26 @@ if (!(isset($_SESSION["DocID"])))
 </head>
 <body>
 	<br>
-	<div id="TitleContainer"  class="row animate__animated animate__backInDown ">
-		<?php 
-	echo "<h2>Hello Doctor ".$_SESSION["Doctor-Name"]."</h2><br>"; ?>		
+	<div class="container-fluid">
+	<!-- <div id="TitleContainer"  class="row animate__animated animate__backInDown "> -->
+	<?php 
+	echo "<center><h1 style=\"color: black\" class=\"fadeInDownBig animated\">Hello Dr. ".$_SESSION["Doctor-Name"]."</h1></center><hr><br>"
+	// echo "<h2>Hello Doctor ".$_SESSION["Doctor-Name"]."</h2><br>"; 
+	?>	
+	<center>
+		<div class="row">
+			<div class="col"><a href="PrescribeMedicine.php"><button class="btn btn-primary hvr-grow" style="width:290px; font-size: 25px">Prescribe Medicine</button></a></div>
+		</div><br>
+		<div class="row">
+			<div class="col"><a href="FindPat.php"><button class="btn btn-primary hvr-grow" style="font-size:25px">Look-up Patient History</button></a></div>
+		</div><br>
+		<div class="row">
+			<div class="col"><a href="Logout.php"><button class="btn btn-primary hvr-grow" style="width:290px; font-size: 25px;">Logout</button></a></div>
+		</div>
+	
+
 	</div>
-	<br><br>
+	<!-- <br><br>
 	<div id="ButtonContainer" >
 			<br>
 
@@ -44,7 +59,7 @@ if (!(isset($_SESSION["DocID"])))
 				
 			</div>
 			<br>
-		</div>
+		</div> -->
 	
 
 </body>

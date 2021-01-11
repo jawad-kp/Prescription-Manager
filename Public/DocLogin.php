@@ -130,7 +130,7 @@ session_start();
 						</div>
 						<br>
 						<div class="error"> <?php echo $btmerr;?> </div> 
-						<center><button class="btn-primary btn hvr-glow" type="submit">Sign in</button></center>
+						<center><a href="Doctor Dash.php"><button class="btn-primary btn hvr-glow" type="submit">Sign in</button></a></center>
 					</form>
 				<div class="col-3"></div>
 			</div>
