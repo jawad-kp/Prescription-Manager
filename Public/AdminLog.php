@@ -1,3 +1,6 @@
+<?php
+session_start(); 
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -68,8 +71,10 @@
 	    	if(password_verify($pass, $dbPass))
 	    	{
 	    		$GLOBALS["btmerr"] = 'Correct Login!!<br> Welcome: '.$row['Name']; //Because we have a dictionary value here, we're forced to use concatination. It won't work with just " in the mix
-	    		//Add redirect link here once next page for the admin is done.
-	    		header("Location:ViewDocs.php");
+	    		$_SESSION["AdminID"] = $usr;
+	    		$_SESSION["Admin-Name"] = $row["Name"];
+
+	    		header("Location:AdminDash.php");
 	    	}
 	    	else
 	    	{

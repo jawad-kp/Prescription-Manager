@@ -1,5 +1,8 @@
 <?php
 session_start();
+if (!(isset($_SESSION["AdminID"]))) {
+	die("You're Accessing this Page Illegally");
+}
 
 ?>
 <!DOCTYPE html>
