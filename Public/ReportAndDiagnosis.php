@@ -94,7 +94,7 @@ if (!(isset($_SESSION["DocPatID"]))) {
 				</div>
 				<div class="row"></div>
 				<div id="dateLab" class="col-12">
-					<input type="text" name="ExpiryDate" id="ExpiryDate" class="form-control">
+					<input type="date" name="ExpiryDate" id="ExpiryDate" class="form-control">
 				</div>
 			</div>
 			<br>	
