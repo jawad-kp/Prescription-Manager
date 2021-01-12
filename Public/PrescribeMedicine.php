@@ -47,12 +47,15 @@ if (!(isset($_SESSION["DocID"])))
 	</script>
 </head>
 <body>
+	<br><div class="container-fluid">
+	<center><h1 style="color: black" class="fadeInDownBig animated">Look-Up Patient</h1></center><hr><br>
+	</div>
 
 <?php
 	require "DBConfig.php";
   	require "InpModder.php";
 ?>
-
+<br>
 <div id="BigDisp" class="container">
 	<div class="row">
 		<div class="col-4"></div>

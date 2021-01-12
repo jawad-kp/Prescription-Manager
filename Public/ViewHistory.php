@@ -28,14 +28,23 @@ if(!(isset($_SESSION["DocID"])))
 	</script> 
 </head>
 <body>
+	<br>
+	<div class = "container-fluid">
+	<center><h1 style="color: black" class="fadeInDownBig animated">Patient History</h1></center><hr><br>
+	<div class="container">
+	<div class="row">
+	<div class="col-4"></div>
+	<div class="col-4">
 	<!-- Displaying Patient history here -->
 	<?php
 	require "DBConfig.php";
 	function RowPrinter($DocName,$PrescID,$Report,$Expiry)
 	{
-		echo "
-		Doctor: $DocName<br>
-		Report: $Report<br>
+		echo "<br>
+		<table class=\"table table-bordered\">
+		<tr><th>Doctor</th><td>$DocName</td></tr>
+		<tr><th>Report</th><td>$Report</td></tr>
+		</table>
 		";
 		$ExpDate = new DateTime($Expiry);
 		$Curr = date("Y-m-d");
@@ -43,19 +52,16 @@ if(!(isset($_SESSION["DocID"])))
 		if($ExpDate >= $CurrDate)
 		{
 			// echo "Expires on [yyyy-mm-dd]: ".$ExpDate->format("Y-m-d");
-			echo "Expires on: ".date('F d Y', strtotime($Expiry));
+			echo "<span style=\"font-weight:bold\">Expires on: ".date('F d Y', strtotime($Expiry))."</span>";
 
 		}
 		else
 		{
-			echo "Prescription has expired.<br> (Expired on: ".date('F d Y', strtotime($Expiry)).")";
+			echo "<span style=\"font-weight:bold\">Prescription has expired.</span><br> (Expired on: ".date('F d Y', strtotime($Expiry)).")";
 		}
 		echo "<br>";
-		echo "
-			<div class = \"col\">
-			<button class = \"LearnMore\" value = $PrescID >Learn More</button>
-			</div>";
-		echo "<br><br>";
+		echo "<button class = \"btn btn-info hvr-grow LearnMore\" value = $PrescID >View Details</button><br>";
+		echo "<br>";
 
 
 	}
@@ -76,6 +82,11 @@ if(!(isset($_SESSION["DocID"])))
 
 
 	?>
+	</div>
+	<div class="col-4"></div>
+	</div>
+	</div>
+	</div>	
 </body>
 </html>
 

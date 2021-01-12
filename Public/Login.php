@@ -89,7 +89,7 @@ session_start();
 	}
   	
   ?>
-
+<br>
 <div class="container-fluid">
 	<center><h1 style="color: black" class="fadeInDownBig animated">User Sign in</h1></center><hr><br>
 	<div class="container">

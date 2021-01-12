@@ -23,7 +23,7 @@ if (!(isset($_SESSION["DocID"])))
 	</script> 
 </head>
 <body>
-
+<br>
 <?php 
 	require "DBConfig.php";
 	require __DIR__."/../EncrypterCustom.php";
@@ -44,12 +44,12 @@ if (!(isset($_SESSION["DocID"])))
 			echo "<div class=\"col-3\"></div>";
 			echo "<table class=\"table table-bordered col-6\">";
 			echo "<tr>";
-			echo "<td>Name </td> <td>$name</td></tr>";
+			echo "<th>Name </th> <td>$name</td></tr>";
 			$adr = Decrptr($row["Addr"]);
 			$Dte = $row["PatDOB"];
 			$dob = date("d/m/Y", strtotime($Dte));
 			$gender = $row["PatGen"];
-			echo "<tr><td>Address </td><td>$adr</td></tr><tr><td>DOB(dd/mm/yyyy)</td><td> $dob</td></tr><tr><td>Gender </td><td>$gender</td></tr>";
+			echo "<tr><th>Address</th><td>$adr</td></tr><tr><th>Date Of Birth</th><td>$dob</td></tr><tr><th>Gender</th><td>$gender</td></tr>";
 			echo "</table>";
 			echo "<div class=\"col-3\"></div>";
 			echo "</div>";

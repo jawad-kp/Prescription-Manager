@@ -63,6 +63,7 @@ if (!(isset($_SESSION["DocPatID"]))) {
 	}
 
 	?>
+<br>
 <div class="contaier-fluid">
 	<center><h1 style="color: black" class="fadeInDownBig animated">Patient Report</h1></center><hr><br>
 	<div class="row">

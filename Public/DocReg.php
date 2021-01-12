@@ -135,7 +135,7 @@
     	}//send_data
 
 ?>
-
+	<br>
 	<div class="container-fluid">
 		<center><h1 style="color: black" class="fadeInDownBig animated">Doctor Register</h1></center>
 		<hr><br>
