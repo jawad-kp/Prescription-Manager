@@ -5,27 +5,18 @@ body
 	/*background-image: url("../Assets/rrbltiehz7b31.png");*/
 }
 
-html.disabled
-{
-	overflow-x: hidden; 
-    overflow-y: hidden; 
-}
-body.disabled
-{
-	/*overflow-x: hidden; */
-    overflow-y: hidden; 
-}
-footer
+.Fut
 {
 	position: fixed;
 	left: 0;
 	bottom: 0;
 	padding: 10px 20px 10px 10px;
-	margin: 3px;
+	margin: 2px;
 	width: 100%;
 	background-color: #35296f;
 	color: white;
 	text-align: right;
+	font-size: 15px; 
 }
 #TitleContainer
 {
@@ -49,42 +40,69 @@ footer
 	
 	justify-content: center;
 	align-items: center;
-	width: 500px;
+	max-width: 600px;
 	margin: auto;
-	padding: 10px;
+	padding: 5px;
 	border-radius: 10px;
 
 }
 
-#ButtonContainer > div
-{
-	background-color: #08083A;
-
-	/*margin: auto;*/
-	/**/
-} 
-
 .fl
 {
-	border-radius: 20px 5px 20px 2px;
-	padding: 5px
-
+	border-radius: 10px 0px 10px 0px; 
+	/*tr,tl,br,bl*/
 }
+
 .fr
 {
-	border-radius: 2px 30px 5px 20px;
-	padding: 5px;
-	--animate-delay: 0.9s;
+	border-radius: 0px 10px 0px 10px;
 }
-#ButtonContainer > div > a
+
+#ButtonContainer > div > div> a
 {
 	font-size: 40px;
 	text-decoration: none;
-	color: #F1F1F1
-
-
+	color: #F1F1F1;
 }
-/*.PatCls
+
+
+.ButBox > a
 {
-	--animate-delay: 2s;
-}*/
+	text-decoration: none;
+	color: #F1F1F1;
+}
+
+.ButBox
+{
+	background-color: #08083A;
+}
+
+
+.RegTag 
+{
+	font-size: 25px;
+}
+
+.LogTag
+{
+	font-size: 25px;
+	text-align: right;
+}
+
+.LogCls
+{
+	/*padding-left:  0px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;*/
+	padding: 15px;
+	/*margin: 30px 0px 0px 0px;*/
+}
+
+.RegCls
+{
+	padding: 15px;
+}
+
+
+
