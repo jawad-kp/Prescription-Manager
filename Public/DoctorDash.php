@@ -13,7 +13,7 @@ if (!(isset($_SESSION["DocID"])))
 	<link rel="stylesheet" type="text/css" href="../node_modules/bootstrap/dist/css/bootstrap.css">
   	<link rel="stylesheet" type="text/css" href="../Dependencies/Hover-master/css/hover.css">
   	<link rel="stylesheet" type="text/css" href="../node_modules/animate.css/animate.css">
-  	<link rel="stylesheet" type="text/css" href="../CustomCSS/index.css">
+  	<!-- <link rel="stylesheet" type="text/css" href="../CustomCSS/index.css"> -->
   	<script type="text/javascript" src="../node_modules/jquery/dist/jquery.js"></script>
   	<script type="text/javascript" src="../node_modules/bootstrap/dist/js/bootstrap.js">
 	</script> 

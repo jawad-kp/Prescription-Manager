@@ -30,8 +30,8 @@ if ((!(isset($_SESSION["DocID"]))) || (!(isset($_SESSION["FindPrescID"]))) || (!
 			echo "
 			<tr>
 			<td>$tb</td>
-			<td>$Fre</td>
 			<td>$Dsge</td>
+			<td>$Fre</td>
 			</tr>
 			";
  			// echo "
@@ -82,7 +82,7 @@ if ((!(isset($_SESSION["DocID"]))) || (!(isset($_SESSION["FindPrescID"]))) || (!
 	 			echo "
 	 			<div class=\"row\">
 		 			<div class=\"col\"></div>
-		 			<div class=\"col\">No Specific Medication Prscribed</div>
+		 			<div class=\"col\">No Specific Medication Prescribed</div>
 		 			<div class=\"col\"></div>
 	 			 </div>";
 	 		}
@@ -167,7 +167,7 @@ if ((!(isset($_SESSION["DocID"]))) || (!(isset($_SESSION["FindPrescID"]))) || (!
 	<div class="container">
 		<div class="row">
 			<div class="col-3"></div>
-			<div class="col-3"><center><button class="btn btn-primary hvr-glow" href="PrescList.php" style="width: 100px">Back</button></center></div>
+			<div class="col-3"><center><a class="btn btn-primary hvr-glow" href="ViewHistory.php" style="width: 100px">Back</a></center></div>
 			<div class="col-3"><center><button class="btn btn-dark hvr-glow" onclick="window.print()">Print Page</button></center></div>
 			<div class="col-3"></div>
 		</div>

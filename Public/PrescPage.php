@@ -169,7 +169,7 @@ if ((!(isset($_SESSION["PatName"]))) || (!(isset($_SESSION["PrescID"]))) )
 	<div class="container">
 		<div class="row">
 			<div class="col-3"></div>
-			<div class="col-3"><center><button class="btn btn-primary hvr-glow" href="PrescList.php" style="width: 100px">Back</button></center></div>
+			<div class="col-3"><center><a class="btn btn-primary hvr-glow" href="PrescList.php" style="width: 100px">Back</a></center></div>
 			<div class="col-3"><center><button class="btn btn-dark hvr-glow" onclick="window.print()">Print Page</button></center></div>
 			<div class="col-3"></div>
 		</div>

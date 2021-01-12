@@ -65,7 +65,7 @@ if (!(isset($_SESSION["PatName"])))
 		if ($today <= $Expr) 
 		{
 			echo "
-			<button class = \"btn btn-primary hvr-glow\" value = $PrescID >View Prescription</button><br>
+			<button class = \" ViewBut btn btn-primary hvr-glow\" value = $PrescID >View Prescription</button><br>
 			";
 			// echo "
 			// <div class = \"col-5\"></div>
