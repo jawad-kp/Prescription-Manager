@@ -1,10 +1,9 @@
-
 <script>
 		$(document).ready(function()
 		{
 			$('.DelBut').on('click', SendForDel);
 		});
-		</script>
+</script>
 		<?php
 	require "DBConfig.php"; 
 	echo '<table>';

@@ -40,7 +40,12 @@ if (!(isset($_SESSION["AdminID"]))) {
 
 			<div class="row fr animate__animated animate__lightSpeedInRight animate__delay-2s">
 				<a href="ViewDocs.php" class="hvr-skew-backward"  role="button">View Doctors Pending Approval</a>
-				
+				<br>				
+			</div>
+			<br>
+			<div class=" row fl animate__animated animate__lightSpeedInLeft animate__delay-3s hvr-rotate">
+				<a href="logout.php" class="hvr-skew-forward" role="button">Logout</a>
+				<br>
 			</div>
 			<br>
 			<br>

@@ -33,8 +33,19 @@ if (!(isset($_SESSION["PatName"])))
 <body>
 	<br>
 	<div class = "container-fluid">
-	<center><h1 style="color: black" class="fadeInDownBig animated">Prescriptions</h1></center><hr><br>
+
+	<div class="row">
+
+		<div class="col-sm">
+			<center><h1 style="color: black" class="fadeInDownBig animated">Prescriptions</h1></center><br><br>
+		</div>
+
+		<div class=" col-xs btn">
+			<a href="logout.php" class="hvr-skew-forward" role="button">Logout</a>
+		</div>
+
 	</div>
+
 	<div class="container">
 	<!-- List our prescriptions here with a link to  open the right one. -->
 	<center>
@@ -54,42 +65,20 @@ if (!(isset($_SESSION["PatName"])))
 		<div class = \"col-4\"></div>
 		</div>
 		";
-		// echo "
-		// <div class = \"container\">
-		// <div class = \"row\">
-		// <div class = \"col-2\"></div>
-		// <div class = \"col-4 content\">$Doc</div>
-		// <div class = \"col-4 content\">$Dia</div>
-		// <div class = \"col-2\"></div></div>";
 		$today = strtotime(date('Y-m-d'));
 		if ($today <= $Expr) 
 		{
 			echo "
 			<button class = \" ViewBut btn btn-primary hvr-glow\" value = $PrescID >View Prescription</button><br>
 			";
-			// echo "
-			// <div class = \"col-5\"></div>
-			// <div class = \"col-2\">
-			// <button class = \"btn btn-primary hvr-glow btn-width\" value = $PrescID >View Prescription</button>
-			// </div>
-			// <div class = \"col-5\"></div>";
 		}
 		else
 		{
 			echo "
 			<button class = \"btn btn-primary hvr-glow\" disabled >Prescription Has Expired!</button><br>
 			";
-			// echo "
-			// <div class = \"col-5\"></div>
-			// <div class = \"col-2\">
-			// <button class = \"btn btn-primary hvr-glow btn-width\" disabled >Prescription Has Expired!</button>
-			// </div>
-			// <div class = \"col-5\"></div>";
-
 		}
-		// echo "<div class = \"col\"> $tym </div>";
-		// echo "</table><div class = \"col-4\"></div></div><br>";
-		// echo "</div><br></div>";
+		
 	}//Prints out rows of data. 
 
 	$qry = "SELECT * FROM `nameviewer` WHERE PatID LIKE \"".$_SESSION['PatID']."\""; //create a view and try this out instead.

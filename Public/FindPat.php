@@ -47,6 +47,19 @@ if (!(isset($_SESSION["DocID"])))
 	</script>
 </head>
 <body>
+	<div class = "container-fluid">
+
+	<div class="row">
+
+		<div class="col-sm">
+			<center><h1 style="color: black" class="fadeInDownBig animated">Patient History</h1></center><br><br>
+		</div>
+
+		<div class=" col-xs btn">
+			<a href="DoctorDash.php" class="hvr-skew-forward" role="button">Back to Dash</a>
+		</div>
+
+	</div>
 
 <?php
 	require "DBConfig.php";
