@@ -1,0 +1,64 @@
+meter {
+  margin: 0 auto 1em;
+  width: 100%;
+  height: 2em;
+
+  /* Applicable only to Firefox */
+  background: none;
+  /*background-color: blue;*/
+}
+/*body
+{
+  background-color: blue;
+}*/
+
+meter::-webkit-meter-bar {
+  background: none;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Webkit based browsers */
+meter[value="1"]::-webkit-meter-optimum-value { background: red; }
+meter[value="2"]::-webkit-meter-optimum-value { background: orange; }
+meter[value="3"]::-webkit-meter-optimum-value { background: yellow; }
+meter[value="4"]::-webkit-meter-optimum-value { background: green; }
+
+/* Gecko based browsers */
+meter[value="1"]::-moz-meter-bar { background: red; }
+meter[value="2"]::-moz-meter-bar { background: orange; }
+meter[value="3"]::-moz-meter-bar { background: yellow; }
+meter[value="4"]::-moz-meter-bar { background: green; }
+
+.passW {
+  color: #9e5151;
+  font-size: 16px;
+}
+
+.passSug
+{
+  color: #519e60;
+  font-size: 16px;
+}
+
+#password-strength-text
+{
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/*#password-strength-text[pers="1"]
+{
+  color: red;
+}
+#password-strength-text[pers="2"]
+{
+  color: orange;
+}
+#password-strength-text[pers="3"]
+{
+  color: yellow;
+}
+#password-strength-text[pers="4"]
+{
+  color: green;
+}*/

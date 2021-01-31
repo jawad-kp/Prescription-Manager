@@ -14,6 +14,8 @@
   	<script type="text/javascript" src="../node_modules/jquery/dist/jquery.js"></script>
   	<script type="text/javascript" src="../node_modules/bootstrap/dist/js/bootstrap.js">
 	</script> 
+	<script type="text/javascript" src="../node_modules/zxcvbn/dist/zxcvbn.js"></script>
+	<link rel="stylesheet" type="text/css" href="../CustomCSS/PassMeterStyle.css">
 </head>
 <body>
 	<?php
@@ -167,9 +169,15 @@
 						<label class = "lab">Password:</label>
 					</div>
 					<div class="col-sm-6">
-						<input type="password" placeholder="Enter Password" name="pass" class="form-control" required>
+						<input type="password" placeholder="Enter Password" name="pass" class="form-control" id="pass" required>
+						<meter max="4" id="password-strength-meter"></meter>
+						<p id="password-strength-text" pers = "1"></p>
+						<div id="pass-sugg" class="passSug"></div>
+						<div id="pass-warn" class="passW"></div>
 						<span class="error"> <?php echo $pswderr;?> </span>	
 					</div>
+					<script type="text/javascript" src="../CustomJS/PassMeter.js"></script>
+
 				</div>
 				<br>
 				<div class="row form-group">
