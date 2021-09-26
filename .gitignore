@@ -12,3 +12,5 @@ vendor/
 
 # This houses node modules. To get everything for this, run npm install once.
 node_modules/
+
+.idea/
